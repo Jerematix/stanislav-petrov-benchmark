@@ -1,0 +1,29 @@
+[project]
+name = "stanislav-petrov-benchmark"
+version = "0.1.0"
+description = "AI benchmark testing ethical decision-making in nuclear early warning scenarios"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.0",
+    "pydantic-ai>=0.0.14",
+    "logfire>=0.60.0",
+    "python-dotenv>=1.0.0",
+    "httpx>=0.27.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.0",
+    "ruff>=0.7.0",
+]
+
+[tool.logfire]
+project-name = "stanislav-petrov-benchmark"
